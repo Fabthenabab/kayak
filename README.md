@@ -13,33 +13,30 @@ https://one-week-in.com/35-cities-to-visit-in-france/
 
 Get weather data from each destination
 Get hotels' info about each destination
-Store all the information above in a data lake
+
 Extract, transform and load cleaned data from your datalake to a data warehouse
 
 ## Dataset
-Dataset is scraped from Booking.com
-The dataset is built from the [MIMIC-III dataset](https://mimic.physionet.org/) [1].
+Data on local accomodation is scraped from https://www.booking.com/
+It contains : 
+hotel name,
+Url to its booking.com page,
+Its coordinates: latitude and longitude
+Score given by the website users
+Text description of the hotel
 
-## Prerequisites
-<!-- https://app.jedha.co/course/project-plan-your-trip-with-kayak-ft/plan-your-trip-with-kayak-ft -->
+The weather for each destination is fetched from https://openweathermap.org/api/one-call-api
+The API helps determine the list of cities where the weather will be the nicest within the next 7 day 
+
 
 ### Build database
+The dataset csv is stored in a data lake and converted in a SQL database
 
-Marketing team wants to focus first on the best cities to travel to in France. According One Week In.com here are the top-35 cities to visit in France:
-
-- Request access to the MIMIC-III dataset : https://mimic.physionet.org/gettingstarted/access/
-- Download the MIMIC-III GitHub repository : https://github.com/MIT-LCP/mimic-code/
-- Follow instructions to build the SQL database : https://github.com/MIT-LCP/mimic-code/tree/master/buildmimic/postgres
-- Build an additional table. This will create a psql table named rrt : 
-```cd mimic-code/concepts/ 
-psql -U postgres -d mimic -a -f rrt.sql
-```
 
 ### Dependencies
 - The source code is written in Python 3.
 - The python packages can be installed with pip : `pip3 install -R requirements.txt`
-- To use Keras models, first install tensorflow : https://www.tensorflow.org/install/
-- WARNING : XGBoost installation with pip is currently disabled for Windows. Instructions for Windows users : https://xgboost.readthedocs.io/en/latest/build.html
+  
 
 ## Usage
 ### Make_dataset.ipynb 
