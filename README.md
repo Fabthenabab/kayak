@@ -3,19 +3,22 @@
 
 
 ## Objective
-This is a POC of using data from intensive care units in order to predict if a patient's kidney health will rather improve or worsen within the next 24 hours. The creatinine rates in blood will be used as an indicator of the kidney's condition.
-
-The aim is to build a classification model that allows to predict the most probable among three classes :
-- The creatinine will increase in the next ≈24hours (i.e. the patient's condition will worsen)
-- The creatinine will decrease in the next ≈24hours 
-- The creatinine will remain stable within next ≈24hours
+Scrape data from destinations
+Get weather data from each destination
+Get hotels' info about each destination
+Store all the information above in a data lake
+Extract, transform and load cleaned data from your datalake to a data warehouse
 
 ## Dataset
 The dataset is built from the [MIMIC-III dataset](https://mimic.physionet.org/) [1].
 
 ## Prerequisites
+<!-- https://app.jedha.co/course/project-plan-your-trip-with-kayak-ft/plan-your-trip-with-kayak-ft -->
 
 ### Build database
+
+Marketing team wants to focus first on the best cities to travel to in France. According One Week In.com here are the top-35 cities to visit in France:
+
 - Request access to the MIMIC-III dataset : https://mimic.physionet.org/gettingstarted/access/
 - Download the MIMIC-III GitHub repository : https://github.com/MIT-LCP/mimic-code/
 - Follow instructions to build the SQL database : https://github.com/MIT-LCP/mimic-code/tree/master/buildmimic/postgres
