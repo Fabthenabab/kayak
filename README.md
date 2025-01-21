@@ -3,13 +3,21 @@
 
 
 ## Objective
-Scrape data from destinations
+Create an application, similar to Kayak website, that will recommend where people should plan their next holidays.
+The application should be based on real data about Weather and Hotels in the area.
+
+The application should then be able to recommend the best destinations and hotels based on the above variables at any given time.
+Application will focus first on the best cities to travel to in France. According One Week In.com here are the top-35 cities to visit in France:
+https://one-week-in.com/35-cities-to-visit-in-france/
+
+
 Get weather data from each destination
 Get hotels' info about each destination
 Store all the information above in a data lake
 Extract, transform and load cleaned data from your datalake to a data warehouse
 
 ## Dataset
+Dataset is scraped from Booking.com
 The dataset is built from the [MIMIC-III dataset](https://mimic.physionet.org/) [1].
 
 ## Prerequisites
